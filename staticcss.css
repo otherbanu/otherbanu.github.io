@@ -150,6 +150,7 @@ a:hover, a:active {
   .hero-text {
     font-size: 36px;
     line-height: 42px;
+    width: auto;
     }
   .hero-text a {
     font-size: 27px;
