@@ -123,8 +123,8 @@ a:hover, a:active {
   margin: auto;
   text-align: center;
   font-family: 'Freight', 'Times New Roman', serif;
-  font-size: 48px;
-  line-height: 56px;
+  font-size: 54px;
+  line-height: 50px;
   letter-spacing: .02em;
   transform: scale(.9,1);
   -webkit-transform: scale(.9,1);
@@ -138,8 +138,9 @@ a:hover, a:active {
 
 .hero-text a {
   font-family: 'Neuzeit', 'Helvetica Neue', 'Arial', sans-serif;
-  font-size: 37px;
-  text-transform: uppercase;
+  line-height: 24px;
+  font-size: 47px;
+  letter-spacing: -.01em;
 }
 
 .hero-text > br {
@@ -148,34 +149,39 @@ a:hover, a:active {
 
 @media screen and (max-width: 1000px) {
   .hero-text {
-    font-size: 36px;
-    line-height: 42px;
+    font-size: 41px;
+    line-height: 43px;
     position: relative;
-    }
+  }
   .hero-text a {
-    font-size: 27px;
-    }
+    font-size: 35px;
+  }
+  .hero-text p {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+  }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 670px) {
   .hero-text {
-    font-size: 24px;
-    line-height: 29px;
+    font-size: 37px;
+    line-height: 42px;
     letter-spacing: 0.05em;
-    }
+  }
   .hero-text a {
-    font-size: 18px;
-    }
+    font-size: 32px;
+  }
   .hero-text p {
     display: inline;
   }
 }
 
-a:hover {
+a:hover, a:active {
   text-shadow: 2px 2px 0px rgba(113,46,52,1), -2px -2px 0px rgba(216,194,161,1), -4px 0px 0px rgba(176,116,129,1);
   animation: text_shadow .5s cubic-bezier(.43,1.06,1,-0.11) infinite;
   text-decoration: none;
 }
+
 @keyframes text_shadow {
   0% {text-shadow: 2px -8px 0px rgba(113,46,52,1);}
   25% {text-shadow: -8px 5px 0px rgba(216,194,161,1);}
