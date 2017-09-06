@@ -109,6 +109,8 @@ p > a, a:visited, a:hover {
 
 .button {
   background: white;
+  color: #2C2C2C;
+  display: inline-block;
   border: 1px solid #2C2C2C;
   padding: 17px 20px 15px;
   font-size: 12px;
