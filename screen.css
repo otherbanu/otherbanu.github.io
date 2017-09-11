@@ -194,6 +194,56 @@ footer {
   margin-bottom: 100px;
 }
 
+/* ==== HP HERO HOVER ==== */
+
+#hero { 
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center; 
+  opacity:0;
+  -webkit-transition: opacity 400ms ease-in-out;
+     -moz-transition: opacity 400ms ease-in-out;
+      -ms-transition: opacity 400ms ease-in-out;
+       -o-transition: opacity 400ms ease-in-out;
+          transition: opacity 400ms ease-in-out;
+}
+
+#hero.costar-bg {
+  background-image: url("./images/costar-bg.png");
+  opacity: 1;
+}
+
+#hero.vfiles-bg {
+  background-image: url("./images/vf-bg.gif");
+  opacity: 1;
+}
+
+#hero.kors-bg {
+  background-image: url("./images/kors-bg.jpg");
+  opacity: 1;
+}
+
+#hero.aa-bg {
+  background-image: url("./images/aa-bg.jpg");
+  opacity: 1;
+}
+
+#hero.ek-bg {
+  background-image: url("./images/ek-bg.jpg");
+  opacity: 1;
+}
+
+#hero.artnet-bg {
+  background-image: url("./images/artnet-bg.png");
+  opacity: 1;
+}
+
+#hero.art-bg {
+  background-image: url("./images/art-bg.jpg");
+  opacity: 1;
+}
 
 /* ==== HEADER ==== */
 
