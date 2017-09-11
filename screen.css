@@ -96,11 +96,22 @@ p {
   margin-bottom: 1.5em;
 }
 
-p > a, a:visited, a:hover {
+a:visited, a:hover {
   color: #2C2C2C;
   text-decoration: none;
 }
 
+p > a:not(.no-underline) {
+  color: #2C2C2C;
+  text-shadow: -1px 0 0 #fff, 1px 0 0 #fff;
+  background-image: linear-gradient( to right, currentColor 0%, currentColor 100% );
+  background-repeat: repeat-x;
+  background-position: 0 96%;
+  -webkit-background-size: 100% 1px;
+  background-size: 100% 1px;
+}
+
+}
 .comment, .comment a, .comment a:visited {
   color: #ababab;
   font-size: 12px;
@@ -117,15 +128,22 @@ p > a, a:visited, a:hover {
   margin-left: 6px;
 }
 
-.button, .button:hover {
-  text-decoration: none;
-  animation: none;
-  text-shadow: none;
-}
-
 .eksell {
   font-family: 'Eksell Display Large';
 }
+
+::selection {
+  background: #4F5151;
+  color: #CFD4D8;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: #4F5151;
+  color: #CFD4D8;
+  text-shadow: none;
+}
+
 
 /* ==== CRAZY HOVER ==== */
 
@@ -142,6 +160,17 @@ a:not(.no-crazy-hover):hover, a:not(.no-crazy-hover):active {
   75% {text-shadow: 2px 6px 0px rgba(252,186,127,1.0);}
   100% {text-shadow: 6px 2px 0px rgba(254,249,244,1.0);}
 }
+
+.no-underline, .button, .button:hover, header .emoji:hover {
+  text-decoration: none;
+  animation: none;
+  text-shadow: none;
+}
+
+.no-text-shadow {
+  text-shadow: none !important;
+}
+
 
 /* ==== LAYOUT ==== */
 
@@ -245,6 +274,15 @@ footer {
   opacity: 1;
 }
 
+/* ==== WORK ==== */
+
+.work-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: auto;
+}
+
 /* ==== HEADER ==== */
 
 .cube{
@@ -270,6 +308,7 @@ header {
   transform: rotate(90deg);
   width: 0;
   white-space: nowrap;
+  z-index: 1;
 }
 
 header a {
@@ -280,11 +319,6 @@ header a {
 
 header a:not(emoji) {
   margin-right: 15px;
-}
-
-header .emoji:hover {
-  text-shadow: none;
-  animation: none;
 }
 
 .tooltip {
